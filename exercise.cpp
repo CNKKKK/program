@@ -5,8 +5,10 @@
 #include<vector>
 #include <stdarg.h>
 #include<cmath>
+#include"Sales_item.h"
 using std::vector;
 using namespace std;
+
 int get_value()
 {
 	int i;
@@ -31,6 +33,23 @@ int min=(i<=j?i:j);
 cout<<min<<endl;
 return min;
 }
+
+int arrsum(const int *b, const int*e)
+{
+	int sum = 0;
+	while (b!=e)
+	{
+		
+		sum += *b;
+		*b++;
+	}
+	cout <<sum<< endl;
+	return sum;
+}
+
+int &get(int *arry,int index)
+{return arry[index];}
+
 int p133_56()
 
 {char *cp="hello world";
@@ -39,7 +58,6 @@ while(cp&&*cp)
 *cp++;}
 return 0;
 }
-
 int p116_423()
 {const char ca[]={'h','e','l','l','o'};
 const char cb[]={'h','e','l','l','o','\0'};//以null作为结束的标志
@@ -183,11 +201,15 @@ int exchang(int &a,int &b)//引用实现交换
 temp=b;
 b=a;
 a=temp;
-return a,b;}
+return 0;
+}
+
+
+char &get_val(string &str,string::size_type ix)
+{return str[ix];}
+
 int main()
 {
-	int a,b;
-	cin>>a>>b;
-	exchang(a,b);
-cout<<a<<b;
-return 0;}
+	Sales_item a;
+return 0;
+}
