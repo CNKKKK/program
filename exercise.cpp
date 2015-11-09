@@ -3,9 +3,12 @@
 #include<string>
 #include<bitset>
 #include<vector>
+#include<list>
+#include<deque>
 #include <stdarg.h>
 #include<cmath>
 #include"Sales_item.h"
+#include"Screen.h"
 using std::vector;
 using namespace std;
 
@@ -134,6 +137,7 @@ case 'O':
 	++oCnt;
 	break;
 }cout<<"aCnt="<<aCnt<<"eCnt="<<eCnt<<"iCnt="<<iCnt<<"oCnt="<<oCnt<<"uCnt="<<uCnt<<endl;
+//ends:不断刷新并插入space；flush：不断刷新
 }
 return 0;}
 int daixiugai()
@@ -204,12 +208,16 @@ a=temp;
 return 0;
 }
 
-
 char &get_val(string &str,string::size_type ix)
 {return str[ix];}
 
+int ji(int n)
+{if(n%2==0)
+return true;
+else
+	return false;
+}
 int main()
 {
-	Sales_item a;
-return 0;
+	return 0;
 }
