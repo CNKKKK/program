@@ -225,7 +225,7 @@ int long_to_ma()
 	cin >> n;
 	return (22 * n);
 }
-int main()
+int Obtain_sizeof()
 {
 	int n_int = INT_MAX;
 	short n_short = SHRT_MAX;
@@ -243,5 +243,47 @@ int main()
 	cout << "long long: " << n_llong << endl;
 	cout << "Minimum int value = " << INT_MIN << endl;
 	cout << "Bits per byte=" << CHAR_BIT << endl;
+	return 0;
+}
+int exceed(){
+#define ZERO 0
+	short sam = SHRT_MAX;
+	unsigned short sue = sam;
+	cout << "Sam has " << sam << "dollars and Sue has" << sue ;
+	cout << "dollars despoited." << endl << "Now";
+	sam++; sue++;
+	cout << "Sam has " << sam << "dollars and Sue has" << sue;
+	cout << "dollars despoited.\nPoor Sam!" << endl ;
+	sam = ZERO; sue = ZERO;
+	cout << "Sam has " << sam << "dollars and Sue has" << sue;
+	cout << "dollars despoited." << endl << "Now";
+	sam = sam - 1;
+	sue = sue - 1;
+	cout << "Sam has " << sam << "dollars and Sue has" << sue;
+	cout << "dollars despoited." << endl << "Lucky Sue" << endl;
+	return 0;
+}
+int hexoct(){
+	int chest = 42;
+	int	waist = 0x42;
+	int insane = 042;
+	cout << "Monsier cuts a striking figure!\n";
+	cout << "chest=" << chest << "42 in decimal\n";
+	cout << "waist =" << waist << "(0x42 in hex)\n";
+	cout << "insane=" << insane << "(0x42 in octal)\n";
+
+	return 0;
+}
+int main(){
+	int chest = 42;
+	int	waist = 42;
+	int insane = 42;
+	cout << "Monsier cuts a striking figure!\n";
+	cout << "chest=" << chest << "(42 in decimal)\n";
+	cout << hex;
+	cout << "waist =" << waist << "(0x42 in hex)\n";
+	cout << oct;
+	cout << "insane=" << insane << "(0x42 in octal)\n";
+
 	return 0;
 }
