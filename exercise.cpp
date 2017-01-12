@@ -274,7 +274,7 @@ int hexoct(){
 
 	return 0;
 }
-int main(){
+int hexoct2(){
 	int chest = 42;
 	int	waist = 42;
 	int insane = 42;
@@ -286,4 +286,99 @@ int main(){
 	cout << "insane=" << insane << "(0x42 in octal)\n";
 
 	return 0;
+}
+int floatnum()
+{
+	cout.setf(ios_base::fixed, ios_base::floatfield);
+	float tub = 10.0 / 3.0;
+	double mint = 10.0 / 3.0;
+	const float million = 1.0e6;
+	cout << "tub= " << tub;
+	cout << ",a million tubs=" << million*tub;
+	cout << ",\nand ten million tubs = ";
+	cout << 10 * million*tub << endl;
+
+	cout << "mint=" << mint << "',and a million mints=";
+	cout << million*mint << endl;
+	return 0;
+}
+int floatadd(){
+	float a = 2.34E+22f;
+	float b = a + 1.0f;
+	cout << "a=" << a << endl;
+	cout << "b-a=" << b - a << endl;
+	return 0;
+}
+int divide (){
+	cout.setf(ios_base::fixed, ios_base::floatfield);
+	cout << "Integer division:9/5= " << 9 / 5 << endl;
+	cout << "Floating point divison:9.5/5.0= ";
+	cout << 9.0 / 5.0 << endl;
+	cout << "Mixed divison:9.0/5= " << 9.0 / 5 << endl;
+	cout << "double constants:le7/9.0= ";
+	cout << 1e7 / 9.0 << endl;
+	cout << "float constants:1e7f/9.0f= ";
+	cout << 1e7f / 9.0f << endl;
+	return 0;
+}
+int convert1(){
+	int auks, bats, coots;
+	auks = 19.99 + 11.99;
+	bats = (int)19.99 + (int)11.99;
+	coots = int(19.99) + int(11.99);
+	cout << "auks= " << auks << " ,bats= " << bats;
+	cout << ", coots= " << coots << endl;
+
+	char ch = 'Z';
+	cout << "The code for " << ch << " is";
+	cout << int(ch) << endl;
+	cout << " Yes, the code is ";
+	cout << static_cast<int>(ch) << endl;
+	return 0;
+}
+int exercise3_1()
+{
+	const int	k_factorFeetToInch = 12;	// 1英尺 = 12英寸
+	int	inches;
+	cout << "输入身高，__英寸：";
+	cin >> inches;
+	cout << "也就" << inches / k_factorFeetToInch << "英尺又" << inches % k_factorFeetToInch << "英寸";
+
+	cout << endl;
+	return (0);
+}
+int exercise3_2()
+{
+	double	height, weight, bmi;
+
+	// 输入身高以英尺和英寸为单位
+	int	feet, inches;
+	cout << "输入身高，__英尺又__英寸：";
+	cin >> feet >> inches;
+
+	// 获得以英寸为单位的身高
+	const int	k_factorFeetToInches = 12; 	// 1英尺 = 12英寸
+	height = feet * k_factorFeetToInches + inches;
+
+	// 获得以米为单位的身高
+	const double	k_factorInchesToMeters = 0.0254; 	// 1英寸 = 0.0254米
+	height = height * k_factorInchesToMeters;
+
+	// 输入体重以磅为单位
+	int	pounds;
+	cout << "输入以磅为单位的体重：";
+	cin >> pounds;
+
+	// 获得以千克为单位的体重
+	const double	k_factorPoundsToKilograms = 1 / 2.2; 	// 1磅 = 1/2.2千克 
+	weight = pounds * k_factorPoundsToKilograms;
+
+	// 计算BMI
+	bmi = weight / (height * height);
+
+	// 显示BMI
+	cout << "BMI：" << bmi << endl;
+
+	cout << endl;
+	return (0);
 }
