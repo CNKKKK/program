@@ -404,7 +404,7 @@ int arrayone(){
 	cout << "bytes.\n";
 	return 0;
 }
-int main()
+int string1()
 {
 	const int Size = 15;
 	char name1[Size];
@@ -420,5 +420,31 @@ int main()
 	name2[3] = '\0';
 	cout << "Here are the first 3 characters of my name: ";
 	cout << name2 << endl;
+	return 0;
+}
+int instr_1(){
+	const int ArSize = 20;
+	char name[ArSize];
+	char dessert[ArSize];
+
+	cout << "Enter your name:\n";
+	cin >> name;
+	cout << "Enter yuor favorite dessert:\n";
+	cin >> dessert;
+	cout << "I have some delicious " << dessert;
+	cout << " for you, " << name << " .\n";
+	return 0;
+}
+int main(){
+	const int ArSize = 20;
+	char name[ArSize];
+	char dessert[ArSize];
+
+	cout << "Enter your name:\n";
+	cin.getline(name, ArSize);
+	cout << "Enter yuor favorite dessert:\n";
+	cin.getline(dessert, ArSize);
+	cout << "I have some delicious " << dessert;
+	cout << " for you, " << name << " .\n";
 	return 0;
 }
