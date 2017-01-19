@@ -479,7 +479,7 @@ int instring(){
 
 	return 0;
 }
-int main(){
+int strtype2(){
 	string s1 = "penguin";
 	string s2, s3;
 
@@ -499,5 +499,57 @@ int main(){
 	s2 += "for a day";
 	cout << "s2+= \"for a day\"yields s2 =" << s2 << endl;
 
+	return 0;
+}
+int strtype3(){
+	char charr1[20];
+	char charr2[20] = "jaguar";
+	string str1;
+	string str2 = "parnter";
+	str1 = str2;
+	strcpy(charr1, charr2);
+
+	str1 += "paste";
+	strcat(charr1, charr2);
+
+	int len1 = str1.size();
+	int len2 = strlen(charr1);
+	cout << "The string " << str1 << " contains " << len1 << " characters.\n";
+	cout << "The string " << charr1 << " contains " << len2 << " characters.\n";		
+	return 0;
+}
+int strtype4(){
+	char charr[20];
+	string str;
+	 
+	cout << "Length of string in charr before input: " << strlen(charr) << endl;
+	cout << "Length of string in str before input: " << str.size() << endl;
+
+	cout << "Enter a line of text:\n";
+	cin.getline(charr, 20);
+	cout << "You entered: " << charr<<endl;
+	cout << "Enter another line of text:\n";
+	getline(cin, str);
+	cout << "You entered:" << str << endl;
+	cout << "Length of string in charr after input: " << strlen(charr) << endl;
+	cout << "Length of string in str before input: " << str.size() << endl;
+	return 0;
+}
+struct infloatable {
+	char name[20];
+	float volume;
+	double price;
+};
+int main(){
+	infloatable guest = {
+		"Glorious Gloria", 1.88, 29.99
+	};
+	infloatable pal = {
+		"Audacious Arthur", 3.12, 32.99
+	};
+	cout << "Expand your guest list with " << guest.name;
+	cout << " and" << pal.name << "!\n";
+	cout << "You can have both for $";
+	cout << guest.price + pal.price << ".\n";
 	return 0;
 }
