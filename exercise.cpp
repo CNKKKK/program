@@ -539,8 +539,8 @@ struct infloatable {
 	char name[20];
 	float volume;
 	double price;
-};
-int main(){
+};	
+int strstruct(){
 	infloatable guest = {
 		"Glorious Gloria", 1.88, 29.99
 	};
@@ -551,5 +551,55 @@ int main(){
 	cout << " and" << pal.name << "!\n";
 	cout << "You can have both for $";
 	cout << guest.price + pal.price << ".\n";
+	return 0;
+}
+struct inflatable{
+	char name[20];
+	float volume;
+	double price;
+};
+int infala(){
+	inflatable bouquet = {
+		"sunflowers", 0.20, 12.49
+	};
+	inflatable choice;
+	cout << "bouquet: " << bouquet.name << " for $";
+	cout << bouquet.price << endl;
+
+	choice = bouquet;
+	cout << "choice: " << choice.name << " for $";
+	cout << choice.price << endl;
+	return 0;
+}
+int address(){
+	int donuts = 6;
+	double cups = 4.5;
+	cout << "donuts value =" << donuts;
+	cout << " and donuts address =" << &donuts << endl;
+	cout << " cups value = " << cups;
+	cout << " and cups address = " << &cups << endl;
+	return 0;
+}
+int ptr_1(){
+	int updates = 6;
+	int *p_updates;
+	p_updates = &updates;
+
+	cout << "Value:updates= " << updates;
+	cout << ", *p_updates= " << *p_updates << endl;
+
+	cout << "Address :&updates= " << &updates;
+	cout << ", p_updates = " << p_updates << endl;
+
+	*p_updates = *p_updates + 1;
+	cout << "Now updates = " << updates << endl;
+	return 0;
+}
+int main(){
+	int higgins = 5;
+	int *pt = &higgins;
+
+	cout << "Value of higgins = " << higgins << "; Address of higgins = " << &higgins << endl;
+	cout << "Value of *pt = " << *pt << ";Value of pt = " << pt << endl;
 	return 0;
 }
